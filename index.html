@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elite Poker Academy</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f1115">
+
+<style>
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:#0f1115;
+  color:#e6e6e6;
+}
+header{
+  padding:16px;
+  background:#171a21;
+  text-align:center;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+nav{
+  display:flex;
+  justify-content:space-around;
+  background:#171a21;
+  padding:10px 0;
+}
+nav button{
+  background:none;
+  border:none;
+  color:#9aa0a6;
+  font-size:14px;
+}
+nav button.active{color:#c9a24d}
+
+main{padding:20px}
+
+.card{
+  background:#171a21;
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:16px;
+}
+</style>
+</head>
+
+<body>
+<header>Elite Poker Academy</header>
+
+<nav>
+  <button class="active">Academia</button>
+  <button>Entrenamiento</button>
+  <button>Simulador</button>
+  <button>Perfil</button>
+</nav>
+
+<main>
+  <div class="card">
+    <h3>Nivel actual</h3>
+    <p>Dominio Técnico Avanzado</p>
+  </div>
+
+  <div class="card">
+    <h3>Ejercicio del día</h3>
+    <p>Analizar spot de overbet en turn</p>
+  </div>
+</main>
+
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>
